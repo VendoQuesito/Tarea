@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "7b36a882-9fca-4417-8a29-17229dfb49c3",
+		"name": "Courses Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33674773"
+	},
+	"item": [
+		{
+			"name": "Register an account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rut\": \"207748161\",\r\n    \"name\": \"MONffas\",\r\n    \"email\": \"nombre@alumnos.ucn.cl\",\r\n    \"password\": \"password\",\r\n    \"confirmPassword\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api}}/account/register",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"account",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nombre@alumnos.ucn.cl\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api}}/account/login",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		}
+	]
+}
